@@ -1,0 +1,491 @@
+<html>
+
+<style>
+table.grid {
+  text-align: center;
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+  margin: 10px;
+}
+</style>
+
+    <body bgcolor=#FFE6A7 style='font-family:sans-serif; padding:10px; line-height:1.25;'>
+    <br><br>
+    <h2 style='color: #432818; padding-top: 10px'> What's your moral alignment? </h2><br>
+    <form method="POST", action="{{url_for('home')}}">
+        <b>1. How many fruits or vegetables do you eat everyday?</b><br>
+        In a typical day, averaging workdays and weekends. Select 10 if more than 10.<br>
+        <table text-align: center; border: 1px black;>
+            <tr>
+                <td><input type='radio' name='fruits_veggies' value=0> </td>
+                <td><input type='radio' name='fruits_veggies' value=1> </td>
+                <td><input type='radio' name='fruits_veggies' value=2> </td>
+                <td><input type='radio' name='fruits_veggies' value=3> </td>
+                <td><input type='radio' name='fruits_veggies' value=4> </td>
+                <td><input type='radio' name='fruits_veggies' value=5> </td>
+                <td><input type='radio' name='fruits_veggies' value=5> </td>
+                <td><input type='radio' name='fruits_veggies' value=5> </td>
+                <td><input type='radio' name='fruits_veggies' value=5> </td>
+                <td><input type='radio' name='fruits_veggies' value=5> </td>
+                <td><input type='radio' name='fruits_veggies' value=5> </td>
+            </tr>
+            <tr>
+                <td><center><font size='-1.5'>0</font></center></td>
+                <td><center><font size='-1.5'>1</font></center></td>
+                <td><center><font size='-1.5'>2</font></center></td>
+                <td><center><font size='-1.5'>3</font></center></td>
+                <td><center><font size='-1.5'>4</font></center></td>
+                <td><center><font size='-1.5'>5</font></center></td>
+                <td><center><font size='-1.5'>6</font></center></td>
+                <td><center><font size='-1.5'>7</font></center></td>
+                <td><center><font size='-1.5'>8</font></center></td>
+                <td><center><font size='-1.5'>9</font></center></td>
+                <td><center><font size='-1.5'>10</font></center></td>
+            </tr>
+        </table>
+        <br>
+        <b>2. How much stress do you typically experience everyday in average over 12 months?</b><br>
+        At work or at home, due to the environment, your coworkers, or because of tragic events such as divorce, job loss, serious illness, loss of family or friends.<br>
+        <table text-align: center; border: 1px black;>
+            <tr>
+                <td><input type='radio' name='daily_stress' value=0> </td>
+                <td><input type='radio' name='daily_stress' value=1> </td>
+                <td><input type='radio' name='daily_stress' value=2> </td>
+                <td><input type='radio' name='daily_stress' value=3> </td>
+                <td><input type='radio' name='daily_stress' value=4> </td>
+                <td><input type='radio' name='daily_stress' value=5> </td>
+                <td><input type='radio' name='daily_stress' value=6> </td>
+                <td><input type='radio' name='daily_stress' value=7> </td>
+                <td><input type='radio' name='daily_stress' value=8> </td>
+                <td><input type='radio' name='daily_stress' value=9> </td>
+                <td><input type='radio' name='daily_stress' value=10> </td>
+            </tr>
+            <tr>
+                <td><center><font size='-1.5'>0</font></center></td>
+                <td><center><font size='-1.5'>1</font></center></td>
+                <td><center><font size='-1.5'>2</font></center></td>
+                <td><center><font size='-1.5'>3</font></center></td>
+                <td><center><font size='-1.5'>4</font></center></td>
+                <td><center><font size='-1.5'>5</font></center></td>
+                <td><center><font size='-1.5'>6</font></center></td>
+                <td><center><font size='-1.5'>7</font></center></td>
+                <td><center><font size='-1.5'>8</font></center></td>
+                <td><center><font size='-1.5'>9</font></center></td>
+                <td><center><font size='-1.5'>10</font></center></td>
+            </tr>
+        </table>
+        <br>
+        <b>3. How many new places do you visit over a period of 12 months?</b><br>
+        Include new states, new cities as well as museum, places of interest and parks in your neighborhood.<br>
+        <table text-align: center; border: 1px black;>
+            <tr>
+                <td><input type='radio' name='places_visited' value=0> </td>
+                <td><input type='radio' name='places_visited' value=1> </td>
+                <td><input type='radio' name='places_visited' value=2> </td>
+                <td><input type='radio' name='places_visited' value=3> </td>
+                <td><input type='radio' name='places_visited' value=4> </td>
+                <td><input type='radio' name='places_visited' value=5> </td>
+                <td><input type='radio' name='places_visited' value=6> </td>
+                <td><input type='radio' name='places_visited' value=7> </td>
+                <td><input type='radio' name='places_visited' value=8> </td>
+                <td><input type='radio' name='places_visited' value=9> </td>
+                <td><input type='radio' name='places_visited' value=10> </td>
+            </tr>
+            <tr>
+                <td><center><font size='-1.5'>0</font></center></td>
+                <td><center><font size='-1.5'>1</font></center></td>
+                <td><center><font size='-1.5'>2</font></center></td>
+                <td><center><font size='-1.5'>3</font></center></td>
+                <td><center><font size='-1.5'>4</font></center></td>
+                <td><center><font size='-1.5'>5</font></center></td>
+                <td><center><font size='-1.5'>6</font></center></td>
+                <td><center><font size='-1.5'>7</font></center></td>
+                <td><center><font size='-1.5'>8</font></center></td>
+                <td><center><font size='-1.5'>9</font></center></td>
+                <td><center><font size='-1.5'>10</font></center></td>
+            </tr>
+        </table>
+        <br>
+        <b>4. How many people are very close to you?</b><br>
+        i.e. close family and friends ready to provide you with a long-term unconditional support<br>
+        <table text-align: center; border: 1px black;>
+            <tr>
+                <td><input type='radio' name='core_circle' value=0> </td>
+                <td><input type='radio' name='core_circle' value=1> </td>
+                <td><input type='radio' name='core_circle' value=2> </td>
+                <td><input type='radio' name='core_circle' value=3> </td>
+                <td><input type='radio' name='core_circle' value=4> </td>
+                <td><input type='radio' name='core_circle' value=5> </td>
+                <td><input type='radio' name='core_circle' value=6> </td>
+                <td><input type='radio' name='core_circle' value=7> </td>
+                <td><input type='radio' name='core_circle' value=8> </td>
+                <td><input type='radio' name='core_circle' value=9> </td>
+                <td><input type='radio' name='core_circle' value=10> </td>
+            </tr>
+            <tr>
+                <td><center><font size='-1.5'>0</font></center></td>
+                <td><center><font size='-1.5'>1</font></center></td>
+                <td><center><font size='-1.5'>2</font></center></td>
+                <td><center><font size='-1.5'>3</font></center></td>
+                <td><center><font size='-1.5'>4</font></center></td>
+                <td><center><font size='-1.5'>5</font></center></td>
+                <td><center><font size='-1.5'>6</font></center></td>
+                <td><center><font size='-1.5'>7</font></center></td>
+                <td><center><font size='-1.5'>8</font></center></td>
+                <td><center><font size='-1.5'>9</font></center></td>
+                <td><center><font size='-1.5'>10</font></center></td>
+            </tr>
+        </table>
+        <br>
+        <b>5. How many people do you interact with during a typical day?</b><br>
+        True interactions and dialogues at home, at work, at the gym, averaging workdays and weekends<br>
+        <table text-align: center; border: 1px black;>
+            <tr>
+                <td><input type='radio' name='social_network' value=0> </td>
+                <td><input type='radio' name='social_network' value=1> </td>
+                <td><input type='radio' name='social_network' value=2> </td>
+                <td><input type='radio' name='social_network' value=3> </td>
+                <td><input type='radio' name='social_network' value=4> </td>
+                <td><input type='radio' name='social_network' value=5> </td>
+                <td><input type='radio' name='social_network' value=6> </td>
+                <td><input type='radio' name='social_network' value=7> </td>
+                <td><input type='radio' name='social_network' value=8> </td>
+                <td><input type='radio' name='social_network' value=9> </td>
+                <td><input type='radio' name='social_network' value=10> </td>
+            </tr>
+            <tr>
+                <td><center><font size='-1.5'>0</font></center></td>
+                <td><center><font size='-1.5'>1</font></center></td>
+                <td><center><font size='-1.5'>2</font></center></td>
+                <td><center><font size='-1.5'>3</font></center></td>
+                <td><center><font size='-1.5'>4</font></center></td>
+                <td><center><font size='-1.5'>5</font></center></td>
+                <td><center><font size='-1.5'>6</font></center></td>
+                <td><center><font size='-1.5'>7</font></center></td>
+                <td><center><font size='-1.5'>8</font></center></td>
+                <td><center><font size='-1.5'>9</font></center></td>
+                <td><center><font size='-1.5'>10</font></center></td>
+            </tr>
+        </table>
+        <br>
+        <b>6. How many remarkable achievements are you proud of over the last 12 months?</b><br>
+        Personal achievements known to your family, close friends or co-workers such as: running a marathon or important race, birth, successful kids, new house or major renovation, major success at work, opening a new business<br>
+        <table text-align: center; border: 1px black;>
+            <tr>
+                <td><input type='radio' name='achievement' value=0> </td>
+                <td><input type='radio' name='achievement' value=1> </td>
+                <td><input type='radio' name='achievement' value=2> </td>
+                <td><input type='radio' name='achievement' value=3> </td>
+                <td><input type='radio' name='achievement' value=4> </td>
+                <td><input type='radio' name='achievement' value=5> </td>
+                <td><input type='radio' name='achievement' value=6> </td>
+                <td><input type='radio' name='achievement' value=7> </td>
+                <td><input type='radio' name='achievement' value=8> </td>
+                <td><input type='radio' name='achievement' value=9> </td>
+                <td><input type='radio' name='achievement' value=10> </td>
+            </tr>
+            <tr>
+                <td><center><font size='-1.5'>0</font></center></td>
+                <td><center><font size='-1.5'>1</font></center></td>
+                <td><center><font size='-1.5'>2</font></center></td>
+                <td><center><font size='-1.5'>3</font></center></td>
+                <td><center><font size='-1.5'>4</font></center></td>
+                <td><center><font size='-1.5'>5</font></center></td>
+                <td><center><font size='-1.5'>6</font></center></td>
+                <td><center><font size='-1.5'>7</font></center></td>
+                <td><center><font size='-1.5'>8</font></center></td>
+                <td><center><font size='-1.5'>9</font></center></td>
+                <td><center><font size='-1.5'>10</font></center></td>
+            </tr>
+        </table>
+        <br>
+        <b>7. In a typical day, how many hours do you experience "flow"?</b><br>
+        "Flow" is defined as the mental state, in which you are fully immersed in performing an activity. You then experience a feeling of energized focus, full involvement, and enjoyment in the process of this activity. Watch Mihaly Csikszentmihalyi's TED Talk <a href="https://www.ted.com/talks/mihaly_csikszentmihalyi_flow_the_secret_to_happiness/transcript?language=en">"Flow, the secret to happiness"</a><br>
+        <table text-align: center; border: 1px black;>
+            <tr>
+                <td><input type='radio' name='flow' value=0> </td>
+                <td><input type='radio' name='flow' value=1> </td>
+                <td><input type='radio' name='flow' value=2> </td>
+                <td><input type='radio' name='flow' value=3> </td>
+                <td><input type='radio' name='flow' value=4> </td>
+                <td><input type='radio' name='flow' value=5> </td>
+                <td><input type='radio' name='flow' value=6> </td>
+                <td><input type='radio' name='flow' value=7> </td>
+                <td><input type='radio' name='flow' value=8> </td>
+                <td><input type='radio' name='flow' value=9> </td>
+                <td><input type='radio' name='flow' value=10> </td>
+            </tr>
+            <tr>
+                <td><center><font size='-1.5'>0</font></center></td>
+                <td><center><font size='-1.5'>1</font></center></td>
+                <td><center><font size='-1.5'>2</font></center></td>
+                <td><center><font size='-1.5'>3</font></center></td>
+                <td><center><font size='-1.5'>4</font></center></td>
+                <td><center><font size='-1.5'>5</font></center></td>
+                <td><center><font size='-1.5'>6</font></center></td>
+                <td><center><font size='-1.5'>7</font></center></td>
+                <td><center><font size='-1.5'>8</font></center></td>
+                <td><center><font size='-1.5'>9</font></center></td>
+                <td><center><font size='-1.5'>10</font></center></td>
+            </tr>
+        </table>
+        <br>
+        <b>8. How many steps (in thousands) do you typically walk everyday?</b><br>
+        Thousand steps, daily average over multiple days including workdays and weekends.<br>
+        <table text-align: center; border: 1px black;>
+            <tr>
+                <td><input type='radio' name='daily_steps' value=0> </td>
+                <td><input type='radio' name='daily_steps' value=1> </td>
+                <td><input type='radio' name='daily_steps' value=2> </td>
+                <td><input type='radio' name='daily_steps' value=3> </td>
+                <td><input type='radio' name='daily_steps' value=4> </td>
+                <td><input type='radio' name='daily_steps' value=5> </td>
+                <td><input type='radio' name='daily_steps' value=6> </td>
+                <td><input type='radio' name='daily_steps' value=7> </td>
+                <td><input type='radio' name='daily_steps' value=8> </td>
+                <td><input type='radio' name='daily_steps' value=9> </td>
+                <td><input type='radio' name='daily_steps' value=10> </td>
+            </tr>
+            <tr>
+                <td><center><font size='-1.5'>0</font></center></td>
+                <td><center><font size='-1.5'>1</font></center></td>
+                <td><center><font size='-1.5'>2</font></center></td>
+                <td><center><font size='-1.5'>3</font></center></td>
+                <td><center><font size='-1.5'>4</font></center></td>
+                <td><center><font size='-1.5'>5</font></center></td>
+                <td><center><font size='-1.5'>6</font></center></td>
+                <td><center><font size='-1.5'>7</font></center></td>
+                <td><center><font size='-1.5'>8</font></center></td>
+                <td><center><font size='-1.5'>9</font></center></td>
+                <td><center><font size='-1.5'>10</font></center></td>
+            </tr>
+        </table>
+        <br>
+        <b>9. About how long do you typically sleep?</b><br>
+        Daily average duration over workdays and weekends.<br>
+        <table text-align: center; border: 1px black;>
+            <tr>
+                <td><input type='radio' name='sleep_hours' value=0> </td>
+                <td><input type='radio' name='sleep_hours' value=1> </td>
+                <td><input type='radio' name='sleep_hours' value=2> </td>
+                <td><input type='radio' name='sleep_hours' value=3> </td>
+                <td><input type='radio' name='sleep_hours' value=4> </td>
+                <td><input type='radio' name='sleep_hours' value=5> </td>
+                <td><input type='radio' name='sleep_hours' value=6> </td>
+                <td><input type='radio' name='sleep_hours' value=7> </td>
+                <td><input type='radio' name='sleep_hours' value=8> </td>
+                <td><input type='radio' name='sleep_hours' value=9> </td>
+                <td><input type='radio' name='sleep_hours' value=10> </td>
+            </tr>
+            <tr>
+                <td><center><font size='-1.5'>0</font></center></td>
+                <td><center><font size='-1.5'>1</font></center></td>
+                <td><center><font size='-1.5'>2</font></center></td>
+                <td><center><font size='-1.5'>3</font></center></td>
+                <td><center><font size='-1.5'>4</font></center></td>
+                <td><center><font size='-1.5'>5</font></center></td>
+                <td><center><font size='-1.5'>6</font></center></td>
+                <td><center><font size='-1.5'>7</font></center></td>
+                <td><center><font size='-1.5'>8</font></center></td>
+                <td><center><font size='-1.5'>9</font></center></td>
+                <td><center><font size='-1.5'>10</font></center></td>
+            </tr>
+        </table>
+        <br>
+        <b>10. How many days of vacation do you typically lose every year?</b><br>
+        Including unused vacation days, lost or carried forward into the following year or because of work stress during your vacation.<br>
+        <table text-align: center; border: 1px black;>
+            <tr>
+                <td><input type='radio' name='lost_vacation' value=0> </td>
+                <td><input type='radio' name='lost_vacation' value=1> </td>
+                <td><input type='radio' name='lost_vacation' value=2> </td>
+                <td><input type='radio' name='lost_vacation' value=3> </td>
+                <td><input type='radio' name='lost_vacation' value=4> </td>
+                <td><input type='radio' name='lost_vacation' value=5> </td>
+                <td><input type='radio' name='lost_vacation' value=6> </td>
+                <td><input type='radio' name='lost_vacation' value=7> </td>
+                <td><input type='radio' name='lost_vacation' value=8> </td>
+                <td><input type='radio' name='lost_vacation' value=9> </td>
+                <td><input type='radio' name='lost_vacation' value=10> </td>
+            </tr>
+            <tr>
+                <td><center><font size='-1.5'>0</font></center></td>
+                <td><center><font size='-1.5'>1</font></center></td>
+                <td><center><font size='-1.5'>2</font></center></td>
+                <td><center><font size='-1.5'>3</font></center></td>
+                <td><center><font size='-1.5'>4</font></center></td>
+                <td><center><font size='-1.5'>5</font></center></td>
+                <td><center><font size='-1.5'>6</font></center></td>
+                <td><center><font size='-1.5'>7</font></center></td>
+                <td><center><font size='-1.5'>8</font></center></td>
+                <td><center><font size='-1.5'>9</font></center></td>
+                <td><center><font size='-1.5'>10</font></center></td>
+            </tr>
+        </table>
+        <br>
+        <b>11. How often do you shout or sulk at somebody in a typical week?</b><br>
+        Expressing your negative emotions in an active or passive manner.<br>
+        <table text-align: center; border: 1px black;>
+            <tr>
+                <td><input type='radio' name='daily_shouting' value=0> </td>
+                <td><input type='radio' name='daily_shouting' value=1> </td>
+                <td><input type='radio' name='daily_shouting' value=2> </td>
+                <td><input type='radio' name='daily_shouting' value=3> </td>
+                <td><input type='radio' name='daily_shouting' value=4> </td>
+                <td><input type='radio' name='daily_shouting' value=5> </td>
+                <td><input type='radio' name='daily_shouting' value=6> </td>
+                <td><input type='radio' name='daily_shouting' value=7> </td>
+                <td><input type='radio' name='daily_shouting' value=8> </td>
+                <td><input type='radio' name='daily_shouting' value=9> </td>
+                <td><input type='radio' name='daily_shouting' value=10> </td>
+            </tr>
+            <tr>
+                <td><center><font size='-1.5'>0</font></center></td>
+                <td><center><font size='-1.5'>1</font></center></td>
+                <td><center><font size='-1.5'>2</font></center></td>
+                <td><center><font size='-1.5'>3</font></center></td>
+                <td><center><font size='-1.5'>4</font></center></td>
+                <td><center><font size='-1.5'>5</font></center></td>
+                <td><center><font size='-1.5'>6</font></center></td>
+                <td><center><font size='-1.5'>7</font></center></td>
+                <td><center><font size='-1.5'>8</font></center></td>
+                <td><center><font size='-1.5'>9</font></center></td>
+                <td><center><font size='-1.5'>10</font></center></td>
+            </tr>
+        </table>
+        <br>
+        <b>12. How many personal recognitions have you received in your life?</b><br>
+        Significant public recognitions validating a personal level of expertise and engagement. i.e. diploma, degree, certificate, accreditation, award, prize, published book, presentation at major conference, medals, cups, titles, etc<br>
+        <table text-align: center; border: 1px black;>
+            <tr>
+                <td><input type='radio' name='personal_awards' value=0> </td>
+                <td><input type='radio' name='personal_awards' value=1> </td>
+                <td><input type='radio' name='personal_awards' value=2> </td>
+                <td><input type='radio' name='personal_awards' value=3> </td>
+                <td><input type='radio' name='personal_awards' value=4> </td>
+                <td><input type='radio' name='personal_awards' value=5> </td>
+                <td><input type='radio' name='personal_awards' value=6> </td>
+                <td><input type='radio' name='personal_awards' value=7> </td>
+                <td><input type='radio' name='personal_awards' value=8> </td>
+                <td><input type='radio' name='personal_awards' value=9> </td>
+                <td><input type='radio' name='personal_awards' value=10> </td>
+            </tr>
+            <tr>
+                <td><center><font size='-1.5'>0</font></center></td>
+                <td><center><font size='-1.5'>1</font></center></td>
+                <td><center><font size='-1.5'>2</font></center></td>
+                <td><center><font size='-1.5'>3</font></center></td>
+                <td><center><font size='-1.5'>4</font></center></td>
+                <td><center><font size='-1.5'>5</font></center></td>
+                <td><center><font size='-1.5'>6</font></center></td>
+                <td><center><font size='-1.5'>7</font></center></td>
+                <td><center><font size='-1.5'>8</font></center></td>
+                <td><center><font size='-1.5'>9</font></center></td>
+                <td><center><font size='-1.5'>10</font></center></td>
+            </tr>
+        </table>
+        <br>
+        <b>13. How many hours fo you spend everyday doing what you are passionate about?</b><br>
+        Daily hours spent doing what you are passionate and dreaming about, and/or contributing to a greater cause: health, education, peace, society development, etc<br>
+        <table text-align: center; border: 1px black;>
+            <tr>
+                <td><input type='radio' name='time_for_passion' value=0> </td>
+                <td><input type='radio' name='time_for_passion' value=1> </td>
+                <td><input type='radio' name='time_for_passion' value=2> </td>
+                <td><input type='radio' name='time_for_passion' value=3> </td>
+                <td><input type='radio' name='time_for_passion' value=4> </td>
+                <td><input type='radio' name='time_for_passion' value=5> </td>
+                <td><input type='radio' name='time_for_passion' value=6> </td>
+                <td><input type='radio' name='time_for_passion' value=7> </td>
+                <td><input type='radio' name='time_for_passion' value=8> </td>
+                <td><input type='radio' name='time_for_passion' value=9> </td>
+                <td><input type='radio' name='time_for_passion' value=10> </td>
+            </tr>
+            <tr>
+                <td><center><font size='-1.5'>0</font></center></td>
+                <td><center><font size='-1.5'>1</font></center></td>
+                <td><center><font size='-1.5'>2</font></center></td>
+                <td><center><font size='-1.5'>3</font></center></td>
+                <td><center><font size='-1.5'>4</font></center></td>
+                <td><center><font size='-1.5'>5</font></center></td>
+                <td><center><font size='-1.5'>6</font></center></td>
+                <td><center><font size='-1.5'>7</font></center></td>
+                <td><center><font size='-1.5'>8</font></center></td>
+                <td><center><font size='-1.5'>9</font></center></td>
+                <td><center><font size='-1.5'>10</font></center></td>
+            </tr>
+        </table>
+        <br>
+        <b>14. In a typical week, how many times do you have the opportunity to think about yourself?</b><br>
+        Include meditation, praying and relaxation activities such as fitness, walking in a park or lunch breaks.<br>
+        <table text-align: center; border: 1px black;>
+            <tr>
+                <td><input type='radio' name='daily_meditation' value=0> </td>
+                <td><input type='radio' name='daily_meditation' value=1> </td>
+                <td><input type='radio' name='daily_meditation' value=2> </td>
+                <td><input type='radio' name='daily_meditation' value=3> </td>
+                <td><input type='radio' name='daily_meditation' value=4> </td>
+                <td><input type='radio' name='daily_meditation' value=5> </td>
+                <td><input type='radio' name='daily_meditation' value=6> </td>
+                <td><input type='radio' name='daily_meditation' value=7> </td>
+                <td><input type='radio' name='daily_meditation' value=8> </td>
+                <td><input type='radio' name='daily_meditation' value=9> </td>
+                <td><input type='radio' name='daily_meditation' value=10> </td>
+            </tr>
+            <tr>
+                <td><center><font size='-1.5'>0</font></center></td>
+                <td><center><font size='-1.5'>1</font></center></td>
+                <td><center><font size='-1.5'>2</font></center></td>
+                <td><center><font size='-1.5'>3</font></center></td>
+                <td><center><font size='-1.5'>4</font></center></td>
+                <td><center><font size='-1.5'>5</font></center></td>
+                <td><center><font size='-1.5'>6</font></center></td>
+                <td><center><font size='-1.5'>7</font></center></td>
+                <td><center><font size='-1.5'>8</font></center></td>
+                <td><center><font size='-1.5'>9</font></center></td>
+                <td><center><font size='-1.5'>10</font></center></td>
+            </tr>
+        </table>
+        <br>
+        <b>15. What age group do you belong to?</b><br>
+        <table text-align: center; border: 1px black;>
+            <tr><td><input type='radio' id='age_0' name='age' value=0><font size='-0.25'>Less than 21</font></td></tr>
+            <tr><td><input type='radio' id='age_1' name='age' value=3.333333><font size='-0.25'>21 to 35</font></td></tr>
+            <tr><td><input type='radio' id='age_2' name='age' value=6.666666><font size='-0.25'>36-50</font></td></tr>
+            <tr><td><input type='radio' id='age_3' name='age' value=10><font size='-0.25'>51 or more</font></td></tr>
+        </table>
+        <br>
+        <b>16. What is your gender?</b><br>
+        <table text-align: center; border: 1px black;>
+            <tr><td><input type='radio' id='gender_0' name='gender' value=0><font size='-0.25'>Male</font></td></tr>
+            <tr><td><input type='radio' id='gender_1' name='gender' value=10><font size='-0.25'>Female</font></td></tr>
+        </table>
+        <br>
+      <button type="submit">Submit</button> <button type="reset">Reset</button>
+    </form>
+
+    <h2 style="color: 432818;"> Say hi </h2>
+    <tr>
+        <td><a href='https://www.linkedin.com/in/hanceely/'>
+            <img style='float: left;' <img src='..\static\linkedin.png' alt="linkedin" width="24"/>
+        </a></td>
+        <td><img style='float: left;' <img src='..\static\blank.png' width="10"/>
+        </a></td>
+        <td><a href='https://github.com/hancee'>
+            <img style='float: left;' <img src='..\static\github.png' alt="linkedin" width="24"/>
+        </a></td>
+        <td><img style='float: left;' <img src='..\static\blank.png' width="10"/>
+        <td><a href='mailto:hanceely@gmail.com'>
+            <img style='float: left;' <img src='..\static\google-hangouts.png' alt="linkedin" width="24"/>
+        </a></td>
+    </tr><br><br>
+    <tr><td>
+    <font size='-1.5'>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></font>
+    </td></tr>
+
+    <h2 style="color: 432818;"> Data Source </h2>
+    <font size='-1.5'>Training data downloaded from <a href="https://www.kaggle.com/ydalat/lifestyle-and-wellbeing-data" title="Kaggle">Kaggle</a>.</font>
+
+    </body>
+</html>

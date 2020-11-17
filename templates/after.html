@@ -1,0 +1,52 @@
+<html>
+
+<body bgcolor=#432818 style='color:#FFE6A7; font-family:sans-serif; line-height:1.25; position:absolute; top:50%; margin:0 auto;'>
+
+    <h3 style='padding-left:32px; margin:0 auto;'>You are likely</h3>
+    <b>
+
+    {% if data == "Lawful Good" %}
+    <h1 style='padding-left:32px; margin:0 auto;'>Lawful Good</h1>
+    {%endif %}
+
+    {% if data == "Lawful Neutral" %}
+    <h1 style='padding-left:32px; margin:0 auto;'>Lawful Neutral</h1>
+    {%endif %}
+
+    {% if data == "Lawful Evil" %}
+    <h1 style='padding-left:32px; margin:0 auto;'>Lawful Evil</h1>
+    {%endif %}
+
+    {% if data == "Neutral Good" %}
+    <h1 style='padding-left:32px; margin:0 auto;'>Neutral Good</h1>
+    {%endif %}
+
+    {% if data == "True Neutral" %}
+    <h1 style='padding-left:32px; margin:0 auto;'>True Neutral</h1>
+    {%endif %}
+
+    {% if data == "Neutral Evil" %}
+    <h1 style='padding-left:32px; margin:0 auto;'>Neutral Evil</h1>
+    {%endif %}
+
+    {% if data == "Chaotic Good" %}
+    <h1 style='padding-left:32px; margin:0 auto;'>Chaotic Good</h1>
+    {%endif %}
+
+    {% if data == "Chaotic Neutral" %}
+    <h1 style='padding-left:32px; margin:0 auto;'>Chaotic Neutral</h1>
+    {%endif %}
+
+    {% if data == "Chaotic Evil" %}
+    <h1 style='padding-left:32px; margin:0 auto;'>Chaotic Evil</h1>
+    {%endif %}
+    </b>
+    <br><br>
+
+    <form action='https://moral-alignment-quiz.herokuapp.com/' style='padding-left:32px; margin:0 auto;'>
+    <input type='submit' value='Another one!'/>
+    </form>
+
+</body>
+
+</html>
