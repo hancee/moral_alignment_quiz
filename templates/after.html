@@ -1,51 +1,124 @@
+<style>
+body {
+  background: linear-gradient(to top, #00296b 0%, #fdc500 35%, #fdd500 70%);
+  font-family: sans-serif;
+  padding-left: 32px;
+  line-height:1.25;
+  position: absolute;
+  background-attachment: fixed;
+  top: 25%;
+  bottom: 30%;
+  margin:0 auto;
+}
+
+h1 {
+  color: #00296b;
+  padding-top: 10px;
+  margin:0 auto;
+  font-family: "PT Sans";
+  font-size: 60px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px;
+}
+
+h2 {
+  color: #00296b;
+  padding-top: 10px;
+  margin:0 auto;
+  font-family: "PT Sans";
+  font-size: 22px;
+  font-style: normal;
+  font-variant: normal;
+}
+
+h3 {
+
+  color: #00296b;
+  padding-top: 10px;
+  margin:0 auto;
+  font-family: "PT Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+}
+
+</style>
+
 <html>
 
-<body bgcolor=#432818 style='color:#FFE6A7; font-family:sans-serif; line-height:1.25; position:absolute; top:50%; margin:0 auto;'>
+<body>
 
-    <h3 style='padding-left:32px; margin:0 auto;'>You are likely</h3>
+    <h3>You are likely</h3>
     <b>
 
     {% if data == "Lawful Good" %}
-    <h1 style='padding-left:32px; margin:0 auto;'>Lawful Good</h1>
+    <h1>Lawful Good</h1>
     {%endif %}
 
     {% if data == "Lawful Neutral" %}
-    <h1 style='padding-left:32px; margin:0 auto;'>Lawful Neutral</h1>
+    <h1>Lawful Neutral</h1>
     {%endif %}
 
     {% if data == "Lawful Evil" %}
-    <h1 style='padding-left:32px; margin:0 auto;'>Lawful Evil</h1>
+    <h1>Lawful Evil</h1>
     {%endif %}
 
     {% if data == "Neutral Good" %}
-    <h1 style='padding-left:32px; margin:0 auto;'>Neutral Good</h1>
+    <h1>Neutral Good</h1>
     {%endif %}
 
     {% if data == "True Neutral" %}
-    <h1 style='padding-left:32px; margin:0 auto;'>True Neutral</h1>
+    <h1>True Neutral</h1>
     {%endif %}
 
     {% if data == "Neutral Evil" %}
-    <h1 style='padding-left:32px; margin:0 auto;'>Neutral Evil</h1>
+    <h1>Neutral Evil</h1>
     {%endif %}
 
     {% if data == "Chaotic Good" %}
-    <h1 style='padding-left:32px; margin:0 auto;'>Chaotic Good</h1>
+    <h1>Chaotic Good</h1>
     {%endif %}
 
     {% if data == "Chaotic Neutral" %}
-    <h1 style='padding-left:32px; margin:0 auto;'>Chaotic Neutral</h1>
+    <h1>Chaotic Neutral</h1>
     {%endif %}
 
     {% if data == "Chaotic Evil" %}
-    <h1 style='padding-left:32px; margin:0 auto;'>Chaotic Evil</h1>
+    <h1>Chaotic Evil</h1>
     {%endif %}
     </b>
     <br><br>
 
-    <form action='https://moral-alignment-quiz.herokuapp.com/' style='padding-left:32px; margin:0 auto;'>
+    <form action='https://moral-alignment-quiz.herokuapp.com/' style='margin:0 auto;'>
     <input type='submit' value='Another one!'/>
     </form>
+
+    <br>
+
+    <h2> Say hi! </h2>
+    <tr> I'm Hancee, a Data Scientist working primarily with Behavior/Performance Profiling (thanks to a Psychology degree), Natural Language Processing (NLP), and Knowledge Mining. This project was inspired by the content I spend countless hours on on Reddit. Might as well build something from it ¯\_(ツ)_/¯ </tr><br><br>
+    <tr>
+        <td><a href='https://www.linkedin.com/in/hanceely/'>
+            <img style='float: left;' <img src='..\static\linkedin.png' alt='linkedin' width='28'/>
+        </a></td>
+        <td><img style='float: left;' <img src='..\static\blank.png' width='10'/>
+        </a></td>
+        <td><a href='https://github.com/hancee'>
+            <img style='float: left;' <img src='..\static\github.png' alt='github' width='28'/>
+        </a></td>
+        <td><img style='float: left;' <img src='..\static\blank.png' width='10'/>
+        <td><a href='mailto:hanceely@gmail.com'>
+            <img style='float: left;' <img src='..\static\google-hangouts.png' alt='gmail' width='28'/>
+        </a></td>
+    </tr><br><br>
+    <tr>
+        <td>
+              <font size='-1.25'>Icons made by <a href='https://www.flaticon.com/authors/pixel-perfect' title='Pixel perfect'>Pixel perfect</a> from <a href='https://www.flaticon.com/' title='Flaticon'> www.flaticon.com</a>
+        </td>
+    </tr>
+
 
 </body>
 

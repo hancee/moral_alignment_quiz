@@ -1,5 +1,3 @@
-<html>
-
 <style>
 table.grid {
   text-align: center;
@@ -8,15 +6,65 @@ table.grid {
   padding: 10px;
   margin: 10px;
 }
+
+body {
+  background: linear-gradient(to top, #00296b 0%, #fdc500 35%, #fdd500 70%);
+  font-family: sans-serif;
+  padding:10px;
+  line-height:1.25;
+  background-attachment: fixed;
+}
+
+h1 {
+  color: #00296b;
+  padding-top: 10px;
+  font-family: 'PT Sans';
+  font-size: 36px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+h2 {
+  color: #00296b;
+  padding-top: 10px;
+  margin:0 auto;
+  font-family: "PT Sans";
+  font-size: 22px;
+  font-style: normal;
+  font-variant: normal;
+}
+
+div {
+  background: #ffffff;
+  font-family: sans-serif;
+  padding: 10px;
+  line-height:1.25;
+  background-attachment: fixed;
+  margin: 1;
+}
+
+input[type='radio'] {
+  height: 18px;
+  width: 18px;
+  vertical-align: middle;
+}
+
 </style>
 
-    <body bgcolor=#FFE6A7 style='font-family:sans-serif; padding:10px; line-height:1.25;'>
-    <br><br>
-    <h2 style='color: #432818; padding-top: 10px'> What's your moral alignment? </h2><br>
-    <form method="POST", action="{{url_for('home')}}">
+<html>
+<div style='background: #F0EFF4; border: 5px #F0EFF4; border-radius: 18px 18px 18px 18px;'>
+    <div style='background-color: transparent; padding: 24px'>
+    <body>
+    <h1> What's your moral alignment? </h1>
+    Originating from Dungeons & Dragons (D&D) fantasy role-playing game, moral alignments were used to define the ethical and moral inclination of characters on two axes: ethic and moral. This would prevent characters from acting randomly. The <b>ethical axis</b> (lawful, neutral, and chaotic) defines how one interacts with structure. A lawful character values rules and order while a chaotic one freedom and adaptability. The <b>moral axis</b> (good, neutral, good) defined how a character interact with other parties. A good character is driven by principle and common good while an evil character focuses on self advancement and survival.<br><br>
+    This quiz will predict your likely moral alignment based on questions about your lifestyle and wellbeing.
+    <br><br><br>
+    <form method='POST', action='{{url_for('home')}}'>
         <b>1. How many fruits or vegetables do you eat everyday?</b><br>
         In a typical day, averaging workdays and weekends. Select 10 if more than 10.<br>
-        <table text-align: center; border: 1px black;>
+        <table>
             <tr>
                 <td><input type='radio' name='fruits_veggies' value=0 required> </td>
                 <td><input type='radio' name='fruits_veggies' value=1 required> </td>
@@ -31,23 +79,23 @@ table.grid {
                 <td><input type='radio' name='fruits_veggies' value=5 required> </td>
             </tr>
             <tr>
-                <td><center>0</font></center></td>
-                <td><center>1</font></center></td>
-                <td><center>2</font></center></td>
-                <td><center>3</font></center></td>
-                <td><center>4</font></center></td>
-                <td><center>5</font></center></td>
-                <td><center>6</font></center></td>
-                <td><center>7</font></center></td>
-                <td><center>8</font></center></td>
-                <td><center>9</font></center></td>
-                <td><center>10</font></center></td>
+                <td><center>0</center></td>
+                <td><center>1</center></td>
+                <td><center>2</center></td>
+                <td><center>3</center></td>
+                <td><center>4</center></td>
+                <td><center>5</center></td>
+                <td><center>6</center></td>
+                <td><center>7</center></td>
+                <td><center>8</center></td>
+                <td><center>9</center></td>
+                <td><center>10</center></td>
             </tr>
         </table>
         <br>
         <b>2. How much stress do you typically experience everyday in average over 12 months?</b><br>
         At work or at home, due to the environment, your coworkers, or because of tragic events such as divorce, job loss, serious illness, loss of family or friends.<br>
-        <table text-align: center; border: 1px black;>
+        <table>
             <tr>
                 <td><input type='radio' name='daily_stress' value=0 required> </td>
                 <td><input type='radio' name='daily_stress' value=1 required> </td>
@@ -62,23 +110,23 @@ table.grid {
                 <td><input type='radio' name='daily_stress' value=10 required> </td>
             </tr>
             <tr>
-                <td><center>0</font></center></td>
-                <td><center>1</font></center></td>
-                <td><center>2</font></center></td>
-                <td><center>3</font></center></td>
-                <td><center>4</font></center></td>
-                <td><center>5</font></center></td>
-                <td><center>6</font></center></td>
-                <td><center>7</font></center></td>
-                <td><center>8</font></center></td>
-                <td><center>9</font></center></td>
-                <td><center>10</font></center></td>
+                <td><center>0</center></td>
+                <td><center>1</center></td>
+                <td><center>2</center></td>
+                <td><center>3</center></td>
+                <td><center>4</center></td>
+                <td><center>5</center></td>
+                <td><center>6</center></td>
+                <td><center>7</center></td>
+                <td><center>8</center></td>
+                <td><center>9</center></td>
+                <td><center>10</center></td>
             </tr>
         </table>
         <br>
         <b>3. How many new places do you visit over a period of 12 months?</b><br>
         Include new states, new cities as well as museum, places of interest and parks in your neighborhood.<br>
-        <table text-align: center; border: 1px black;>
+        <table>
             <tr>
                 <td><input type='radio' name='places_visited' value=0 required> </td>
                 <td><input type='radio' name='places_visited' value=1 required> </td>
@@ -93,23 +141,23 @@ table.grid {
                 <td><input type='radio' name='places_visited' value=10 required> </td>
             </tr>
             <tr>
-                <td><center>0</font></center></td>
-                <td><center>1</font></center></td>
-                <td><center>2</font></center></td>
-                <td><center>3</font></center></td>
-                <td><center>4</font></center></td>
-                <td><center>5</font></center></td>
-                <td><center>6</font></center></td>
-                <td><center>7</font></center></td>
-                <td><center>8</font></center></td>
-                <td><center>9</font></center></td>
-                <td><center>10</font></center></td>
+                <td><center>0</center></td>
+                <td><center>1</center></td>
+                <td><center>2</center></td>
+                <td><center>3</center></td>
+                <td><center>4</center></td>
+                <td><center>5</center></td>
+                <td><center>6</center></td>
+                <td><center>7</center></td>
+                <td><center>8</center></td>
+                <td><center>9</center></td>
+                <td><center>10</center></td>
             </tr>
         </table>
         <br>
         <b>4. How many people are very close to you?</b><br>
         i.e. close family and friends ready to provide you with a long-term unconditional support<br>
-        <table text-align: center; border: 1px black;>
+        <table>
             <tr>
                 <td><input type='radio' name='core_circle' value=0 required> </td>
                 <td><input type='radio' name='core_circle' value=1 required> </td>
@@ -124,23 +172,23 @@ table.grid {
                 <td><input type='radio' name='core_circle' value=10 required> </td>
             </tr>
             <tr>
-                <td><center>0</font></center></td>
-                <td><center>1</font></center></td>
-                <td><center>2</font></center></td>
-                <td><center>3</font></center></td>
-                <td><center>4</font></center></td>
-                <td><center>5</font></center></td>
-                <td><center>6</font></center></td>
-                <td><center>7</font></center></td>
-                <td><center>8</font></center></td>
-                <td><center>9</font></center></td>
-                <td><center>10</font></center></td>
+                <td><center>0</center></td>
+                <td><center>1</center></td>
+                <td><center>2</center></td>
+                <td><center>3</center></td>
+                <td><center>4</center></td>
+                <td><center>5</center></td>
+                <td><center>6</center></td>
+                <td><center>7</center></td>
+                <td><center>8</center></td>
+                <td><center>9</center></td>
+                <td><center>10</center></td>
             </tr>
         </table>
         <br>
         <b>5. How many people do you interact with during a typical day?</b><br>
         True interactions and dialogues at home, at work, at the gym, averaging workdays and weekends<br>
-        <table text-align: center; border: 1px black;>
+        <table>
             <tr>
                 <td><input type='radio' name='social_network' value=0 required> </td>
                 <td><input type='radio' name='social_network' value=1 required> </td>
@@ -155,23 +203,23 @@ table.grid {
                 <td><input type='radio' name='social_network' value=10 required> </td>
             </tr>
             <tr>
-                <td><center>0</font></center></td>
-                <td><center>1</font></center></td>
-                <td><center>2</font></center></td>
-                <td><center>3</font></center></td>
-                <td><center>4</font></center></td>
-                <td><center>5</font></center></td>
-                <td><center>6</font></center></td>
-                <td><center>7</font></center></td>
-                <td><center>8</font></center></td>
-                <td><center>9</font></center></td>
-                <td><center>10</font></center></td>
+                <td><center>0</center></td>
+                <td><center>1</center></td>
+                <td><center>2</center></td>
+                <td><center>3</center></td>
+                <td><center>4</center></td>
+                <td><center>5</center></td>
+                <td><center>6</center></td>
+                <td><center>7</center></td>
+                <td><center>8</center></td>
+                <td><center>9</center></td>
+                <td><center>10</center></td>
             </tr>
         </table>
         <br>
         <b>6. How many remarkable achievements are you proud of over the last 12 months?</b><br>
         Personal achievements known to your family, close friends or co-workers such as: running a marathon or important race, birth, successful kids, new house or major renovation, major success at work, opening a new business<br>
-        <table text-align: center; border: 1px black;>
+        <table>
             <tr>
                 <td><input type='radio' name='achievement' value=0 required> </td>
                 <td><input type='radio' name='achievement' value=1 required> </td>
@@ -186,23 +234,23 @@ table.grid {
                 <td><input type='radio' name='achievement' value=10 required> </td>
             </tr>
             <tr>
-                <td><center>0</font></center></td>
-                <td><center>1</font></center></td>
-                <td><center>2</font></center></td>
-                <td><center>3</font></center></td>
-                <td><center>4</font></center></td>
-                <td><center>5</font></center></td>
-                <td><center>6</font></center></td>
-                <td><center>7</font></center></td>
-                <td><center>8</font></center></td>
-                <td><center>9</font></center></td>
-                <td><center>10</font></center></td>
+                <td><center>0</center></td>
+                <td><center>1</center></td>
+                <td><center>2</center></td>
+                <td><center>3</center></td>
+                <td><center>4</center></td>
+                <td><center>5</center></td>
+                <td><center>6</center></td>
+                <td><center>7</center></td>
+                <td><center>8</center></td>
+                <td><center>9</center></td>
+                <td><center>10</center></td>
             </tr>
         </table>
         <br>
-        <b>7. In a typical day, how many hours do you experience "flow"?</b><br>
-        "Flow" is defined as the mental state, in which you are fully immersed in performing an activity. You then experience a feeling of energized focus, full involvement, and enjoyment in the process of this activity. Watch Mihaly Csikszentmihalyi's TED Talk <a href="https://www.ted.com/talks/mihaly_csikszentmihalyi_flow_the_secret_to_happiness/transcript?language=en">"Flow, the secret to happiness"</a><br>
-        <table text-align: center; border: 1px black;>
+        <b>7. In a typical day, how many hours do you experience 'flow'?</b><br>
+        'Flow' is defined as the mental state, in which you are fully immersed in performing an activity. You then experience a feeling of energized focus, full involvement, and enjoyment in the process of this activity. Watch Mihaly Csikszentmihalyi's TED Talk <a href='https://www.ted.com/talks/mihaly_csikszentmihalyi_flow_the_secret_to_happiness/transcript?language=en'>'Flow, the secret to happiness'</a><br>
+        <table>
             <tr>
                 <td><input type='radio' name='flow' value=0 required> </td>
                 <td><input type='radio' name='flow' value=1 required> </td>
@@ -217,23 +265,23 @@ table.grid {
                 <td><input type='radio' name='flow' value=10 required> </td>
             </tr>
             <tr>
-                <td><center>0</font></center></td>
-                <td><center>1</font></center></td>
-                <td><center>2</font></center></td>
-                <td><center>3</font></center></td>
-                <td><center>4</font></center></td>
-                <td><center>5</font></center></td>
-                <td><center>6</font></center></td>
-                <td><center>7</font></center></td>
-                <td><center>8</font></center></td>
-                <td><center>9</font></center></td>
-                <td><center>10</font></center></td>
+                <td><center>0</center></td>
+                <td><center>1</center></td>
+                <td><center>2</center></td>
+                <td><center>3</center></td>
+                <td><center>4</center></td>
+                <td><center>5</center></td>
+                <td><center>6</center></td>
+                <td><center>7</center></td>
+                <td><center>8</center></td>
+                <td><center>9</center></td>
+                <td><center>10</center></td>
             </tr>
         </table>
         <br>
         <b>8. How many steps (in thousands) do you typically walk everyday?</b><br>
         Thousand steps, daily average over multiple days including workdays and weekends.<br>
-        <table text-align: center; border: 1px black;>
+        <table>
             <tr>
                 <td><input type='radio' name='daily_steps' value=0 required> </td>
                 <td><input type='radio' name='daily_steps' value=1 required> </td>
@@ -248,23 +296,23 @@ table.grid {
                 <td><input type='radio' name='daily_steps' value=10 required> </td>
             </tr>
             <tr>
-                <td><center>0</font></center></td>
-                <td><center>1</font></center></td>
-                <td><center>2</font></center></td>
-                <td><center>3</font></center></td>
-                <td><center>4</font></center></td>
-                <td><center>5</font></center></td>
-                <td><center>6</font></center></td>
-                <td><center>7</font></center></td>
-                <td><center>8</font></center></td>
-                <td><center>9</font></center></td>
-                <td><center>10</font></center></td>
+                <td><center>0</center></td>
+                <td><center>1</center></td>
+                <td><center>2</center></td>
+                <td><center>3</center></td>
+                <td><center>4</center></td>
+                <td><center>5</center></td>
+                <td><center>6</center></td>
+                <td><center>7</center></td>
+                <td><center>8</center></td>
+                <td><center>9</center></td>
+                <td><center>10</center></td>
             </tr>
         </table>
         <br>
         <b>9. About how long do you typically sleep?</b><br>
         Daily average duration over workdays and weekends.<br>
-        <table text-align: center; border: 1px black;>
+        <table>
             <tr>
                 <td><input type='radio' name='sleep_hours' value=0 required> </td>
                 <td><input type='radio' name='sleep_hours' value=1 required> </td>
@@ -279,23 +327,23 @@ table.grid {
                 <td><input type='radio' name='sleep_hours' value=10 required> </td>
             </tr>
             <tr>
-                <td><center>0</font></center></td>
-                <td><center>1</font></center></td>
-                <td><center>2</font></center></td>
-                <td><center>3</font></center></td>
-                <td><center>4</font></center></td>
-                <td><center>5</font></center></td>
-                <td><center>6</font></center></td>
-                <td><center>7</font></center></td>
-                <td><center>8</font></center></td>
-                <td><center>9</font></center></td>
-                <td><center>10</font></center></td>
+                <td><center>0</center></td>
+                <td><center>1</center></td>
+                <td><center>2</center></td>
+                <td><center>3</center></td>
+                <td><center>4</center></td>
+                <td><center>5</center></td>
+                <td><center>6</center></td>
+                <td><center>7</center></td>
+                <td><center>8</center></td>
+                <td><center>9</center></td>
+                <td><center>10</center></td>
             </tr>
         </table>
         <br>
         <b>10. How many days of vacation do you typically lose every year?</b><br>
         Including unused vacation days, lost or carried forward into the following year or because of work stress during your vacation.<br>
-        <table text-align: center; border: 1px black;>
+        <table>
             <tr>
                 <td><input type='radio' name='lost_vacation' value=0 required> </td>
                 <td><input type='radio' name='lost_vacation' value=1 required> </td>
@@ -310,23 +358,23 @@ table.grid {
                 <td><input type='radio' name='lost_vacation' value=10 required> </td>
             </tr>
             <tr>
-                <td><center>0</font></center></td>
-                <td><center>1</font></center></td>
-                <td><center>2</font></center></td>
-                <td><center>3</font></center></td>
-                <td><center>4</font></center></td>
-                <td><center>5</font></center></td>
-                <td><center>6</font></center></td>
-                <td><center>7</font></center></td>
-                <td><center>8</font></center></td>
-                <td><center>9</font></center></td>
-                <td><center>10</font></center></td>
+                <td><center>0</center></td>
+                <td><center>1</center></td>
+                <td><center>2</center></td>
+                <td><center>3</center></td>
+                <td><center>4</center></td>
+                <td><center>5</center></td>
+                <td><center>6</center></td>
+                <td><center>7</center></td>
+                <td><center>8</center></td>
+                <td><center>9</center></td>
+                <td><center>10</center></td>
             </tr>
         </table>
         <br>
         <b>11. How often do you shout or sulk at somebody in a typical week?</b><br>
         Expressing your negative emotions in an active or passive manner.<br>
-        <table text-align: center; border: 1px black;>
+        <table>
             <tr>
                 <td><input type='radio' name='daily_shouting' value=0 required> </td>
                 <td><input type='radio' name='daily_shouting' value=1 required> </td>
@@ -341,23 +389,23 @@ table.grid {
                 <td><input type='radio' name='daily_shouting' value=10 required> </td>
             </tr>
             <tr>
-                <td><center>0</font></center></td>
-                <td><center>1</font></center></td>
-                <td><center>2</font></center></td>
-                <td><center>3</font></center></td>
-                <td><center>4</font></center></td>
-                <td><center>5</font></center></td>
-                <td><center>6</font></center></td>
-                <td><center>7</font></center></td>
-                <td><center>8</font></center></td>
-                <td><center>9</font></center></td>
-                <td><center>10</font></center></td>
+                <td><center>0</center></td>
+                <td><center>1</center></td>
+                <td><center>2</center></td>
+                <td><center>3</center></td>
+                <td><center>4</center></td>
+                <td><center>5</center></td>
+                <td><center>6</center></td>
+                <td><center>7</center></td>
+                <td><center>8</center></td>
+                <td><center>9</center></td>
+                <td><center>10</center></td>
             </tr>
         </table>
         <br>
         <b>12. How many personal recognitions have you received in your life?</b><br>
         Significant public recognitions validating a personal level of expertise and engagement. i.e. diploma, degree, certificate, accreditation, award, prize, published book, presentation at major conference, medals, cups, titles, etc<br>
-        <table text-align: center; border: 1px black;>
+        <table>
             <tr>
                 <td><input type='radio' name='personal_awards' value=0 required> </td>
                 <td><input type='radio' name='personal_awards' value=1 required> </td>
@@ -372,23 +420,23 @@ table.grid {
                 <td><input type='radio' name='personal_awards' value=10 required> </td>
             </tr>
             <tr>
-                <td><center>0</font></center></td>
-                <td><center>1</font></center></td>
-                <td><center>2</font></center></td>
-                <td><center>3</font></center></td>
-                <td><center>4</font></center></td>
-                <td><center>5</font></center></td>
-                <td><center>6</font></center></td>
-                <td><center>7</font></center></td>
-                <td><center>8</font></center></td>
-                <td><center>9</font></center></td>
-                <td><center>10</font></center></td>
+                <td><center>0</center></td>
+                <td><center>1</center></td>
+                <td><center>2</center></td>
+                <td><center>3</center></td>
+                <td><center>4</center></td>
+                <td><center>5</center></td>
+                <td><center>6</center></td>
+                <td><center>7</center></td>
+                <td><center>8</center></td>
+                <td><center>9</center></td>
+                <td><center>10</center></td>
             </tr>
         </table>
         <br>
         <b>13. How many hours fo you spend everyday doing what you are passionate about?</b><br>
         Daily hours spent doing what you are passionate and dreaming about, and/or contributing to a greater cause: health, education, peace, society development, etc<br>
-        <table text-align: center; border: 1px black;>
+        <table>
             <tr>
                 <td><input type='radio' name='time_for_passion' value=0 required> </td>
                 <td><input type='radio' name='time_for_passion' value=1 required> </td>
@@ -403,23 +451,23 @@ table.grid {
                 <td><input type='radio' name='time_for_passion' value=10 required> </td>
             </tr>
             <tr>
-                <td><center>0</font></center></td>
-                <td><center>1</font></center></td>
-                <td><center>2</font></center></td>
-                <td><center>3</font></center></td>
-                <td><center>4</font></center></td>
-                <td><center>5</font></center></td>
-                <td><center>6</font></center></td>
-                <td><center>7</font></center></td>
-                <td><center>8</font></center></td>
-                <td><center>9</font></center></td>
-                <td><center>10</font></center></td>
+                <td><center>0</center></td>
+                <td><center>1</center></td>
+                <td><center>2</center></td>
+                <td><center>3</center></td>
+                <td><center>4</center></td>
+                <td><center>5</center></td>
+                <td><center>6</center></td>
+                <td><center>7</center></td>
+                <td><center>8</center></td>
+                <td><center>9</center></td>
+                <td><center>10</center></td>
             </tr>
         </table>
         <br>
         <b>14. In a typical week, how many times do you have the opportunity to think about yourself?</b><br>
         Include meditation, praying and relaxation activities such as fitness, walking in a park or lunch breaks.<br>
-        <table text-align: center; border: 1px black;>
+        <table>
             <tr>
                 <td><input type='radio' name='daily_meditation' value=0 required> </td>
                 <td><input type='radio' name='daily_meditation' value=1 required> </td>
@@ -434,58 +482,61 @@ table.grid {
                 <td><input type='radio' name='daily_meditation' value=10 required> </td>
             </tr>
             <tr>
-                <td><center>0</font></center></td>
-                <td><center>1</font></center></td>
-                <td><center>2</font></center></td>
-                <td><center>3</font></center></td>
-                <td><center>4</font></center></td>
-                <td><center>5</font></center></td>
-                <td><center>6</font></center></td>
-                <td><center>7</font></center></td>
-                <td><center>8</font></center></td>
-                <td><center>9</font></center></td>
-                <td><center>10</font></center></td>
+                <td><center>0</center></td>
+                <td><center>1</center></td>
+                <td><center>2</center></td>
+                <td><center>3</center></td>
+                <td><center>4</center></td>
+                <td><center>5</center></td>
+                <td><center>6</center></td>
+                <td><center>7</center></td>
+                <td><center>8</center></td>
+                <td><center>9</center></td>
+                <td><center>10</center></td>
             </tr>
         </table>
         <br>
         <b>15. What age group do you belong to?</b><br>
-        <table text-align: center; border: 1px black;>
-            <tr><td><input type='radio' id='age_0' name='age' value=0>Less than 21</font></td></tr>
-            <tr><td><input type='radio' id='age_1' name='age' value=3.333333>21 to 35</font></td></tr>
-            <tr><td><input type='radio' id='age_2' name='age' value=6.666666><36-50</font></td></tr>
-            <tr><td><input type='radio' id='age_3' name='age' value=10>51 or more</font></td></tr>
+        <table>
+            <tr><td><input type='radio' id='age_0' name='age' value=0>Less than 21</td></tr>
+            <tr><td><input type='radio' id='age_1' name='age' value=3.333333>21 to 35</td></tr>
+            <tr><td><input type='radio' id='age_2' name='age' value=6.666666>36 to 50</td></tr>
+            <tr><td><input type='radio' id='age_3' name='age' value=10>51 or more</td></tr>
         </table>
         <br>
         <b>16. What is your gender?</b><br>
-        <table text-align: center; border: 1px black;>
-            <tr><td><input type='radio' id='gender_0' name='gender' value=0>Male</font></td></tr>
-            <tr><td><input type='radio' id='gender_1' name='gender' value=10>Female</font></td></tr>
+        <table>
+            <tr><td><input type='radio' id='gender_0' name='gender' value=0>Male</td></tr>
+            <tr><td><input type='radio' id='gender_1' name='gender' value=10>Female</td></tr>
         </table>
         <br>
-      <button type="submit">Submit</button> <button type="reset">Reset</button>
+      <button type='submit'>Submit</button> <button type='reset'>Reset</button>
     </form>
 
-    <h2 style="color: 432818;"> Say hi </h2>
+    <h2>Data Source</h2>
+    Training data downloaded from <a href='https://www.kaggle.com/ydalat/lifestyle-and-wellbeing-data' title='Kaggle'>Kaggle</a>.
+
+    <h2>Say hi!</h2>
+    <tr>I'm Hancee, a Data Scientist working primarily with Behavior/Performance Profiling (thanks to a Psychology degree), Natural Language Processing (NLP), and Knowledge Mining. This project was inspired by the content I spend countless hours on on Reddit. Might as well build something out of it ¯\_(ツ)_/¯</tr><br><br>
     <tr>
         <td><a href='https://www.linkedin.com/in/hanceely/'>
-            <img style='float: left;' <img src='..\static\linkedin.png' alt="linkedin" width="24"/>
+            <img style='float: left;' <img src='..\static\linkedin.png' alt='linkedin' width='28'/>
         </a></td>
-        <td><img style='float: left;' <img src='..\static\blank.png' width="10"/>
+        <td><img style='float: left;' <img src='..\static\blank.png' width='10'/>
         </a></td>
         <td><a href='https://github.com/hancee'>
-            <img style='float: left;' <img src='..\static\github.png' alt="linkedin" width="24"/>
+            <img style='float: left;' <img src='..\static\github.png' alt='github' width='28'/>
         </a></td>
-        <td><img style='float: left;' <img src='..\static\blank.png' width="10"/>
+        <td><img style='float: left;' <img src='..\static\blank.png' width='10'/>
         <td><a href='mailto:hanceely@gmail.com'>
-            <img style='float: left;' <img src='..\static\google-hangouts.png' alt="linkedin" width="24"/>
+            <img style='float: left;' <img src='..\static\google-hangouts.png' alt='gmail' width='28'/>
         </a></td>
     </tr><br><br>
     <tr><td>
-    <font size='-1.25'>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></font>
+    <font size='-1.2'>Icons made by <a href='https://www.flaticon.com/authors/pixel-perfect' title='Pixel perfect'>Pixel perfect</a> from <a href='https://www.flaticon.com/' title='Flaticon'> www.flaticon.com</a></font>
     </td></tr>
 
-    <h2 style="color: 432818;"> Data Source </h2>
-    <font size='-1.25'>Training data downloaded from <a href="https://www.kaggle.com/ydalat/lifestyle-and-wellbeing-data" title="Kaggle">Kaggle</a>.</font>
-
     </body>
+  </div>
+</div>
 </html>
